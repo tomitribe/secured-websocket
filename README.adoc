@@ -1,0 +1,126 @@
+= WebSocket secured by BASIC
+
+Sample of the blog post: http://www.tomitribe.com/blog/2015/03/basic-on-websocket-in-60-seconds/
+
+== How to run
+
+`$ mvn clean package`
+
+== Expected output
+
+[source]
+----
+Running org.supertribe.websocket.TribeWebSocketTest
+INFOS - Starting TomEE from: /home/rmannibucau/dev/Tomitribe/secured-websocket/target/tomee-embedded_478813341
+INFOS - Initializing ProtocolHandler ["http-bio-60155"]
+INFOS - Starting service Tomcat
+INFOS - Starting Servlet Engine: Apache Tomcat/8.0.20
+INFOS - Starting ProtocolHandler ["http-bio-60155"]
+INFOS - Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+INFOS - ********************************************************************************
+INFOS - OpenEJB http://tomee.apache.org/
+INFOS - Startup: Fri Mar 06 23:17:01 CET 2015
+INFOS - Copyright 1999-2015 (C) Apache OpenEJB Project, All Rights Reserved.
+INFOS - Version: 5.0.0-SNAPSHOT
+INFOS - Build date: 20150306
+INFOS - Build time: 10:56
+INFOS - ********************************************************************************
+INFOS - openejb.home = /home/rmannibucau/dev/Tomitribe/secured-websocket/target/tomee-embedded_478813341
+INFOS - openejb.base = /home/rmannibucau/dev/Tomitribe/secured-websocket/target/tomee-embedded_478813341
+INFOS - Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@2593b800
+INFOS - Succeeded in installing singleton service
+INFOS - openejb configuration file is '/home/rmannibucau/dev/Tomitribe/secured-websocket/target/tomee-embedded_478813341/conf/openejb.xml'
+INFOS - Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+INFOS - Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+INFOS - Using 'openejb.system.apps=false'
+INFOS - Using 'openejb.deployments.classpath=false'
+INFOS - Creating TransactionManager(id=Default Transaction Manager)
+INFOS - Creating SecurityService(id=Tomcat Security Service)
+INFOS - Using 'openejb.servicemanager.enabled=false'
+INFOS - Using 'openejb.deployments.classpath.filter.systemapps=false'
+INFOS - Configuring enterprise application: 
+INFOS - Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+INFOS - Auto-creating a container for bean .Comp1989787102: Container(type=MANAGED, id=Default Managed Container)
+INFOS - Creating Container(id=Default Managed Container)
+INFOS - Using directory /tmp for stateful session passivation
+INFOS - Enterprise application "" loaded.
+INFOS - Assembling app: 
+INFOS - Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@2593b800
+INFOS - OpenWebBeans Container is starting...
+INFOS - Adding OpenWebBeansPlugin : [CdiPlugin]
+INFOS - Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+INFOS - All injection points were validated successfully.
+INFOS - OpenWebBeans Container has started, it took 330 ms.
+INFOS - using default host: localhost
+INFOS - ------------------------- localhost -> /
+INFOS - Using 'openejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager'
+INFOS - The start() method was called on component [org.apache.catalina.webresources.JarResourceSet@659fb282] after start() had already been called. The second call will be ignored.
+INFOS - The start() method was called on component [org.apache.catalina.webresources.DirResourceSet@5780a8ed] after start() had already been called. The second call will be ignored.
+INFOS - The start() method was called on component [org.apache.catalina.webresources.DirResourceSet@3fd28c7c] after start() had already been called. The second call will be ignored.
+INFOS - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFOS - Deployed Application(path=)
+INFOS - Stopping ProtocolHandler ["http-bio-60155"]
+INFOS - Pausing ProtocolHandler ["http-bio-60155"]
+INFOS - Stopping service Tomcat
+INFOS - Undeploying app: 
+INFOS - Destroying ProtocolHandler ["http-bio-60155"]
+INFOS - Starting TomEE from: /home/rmannibucau/dev/Tomitribe/secured-websocket/target/tomee-embedded_478813341
+INFOS - Initializing ProtocolHandler ["http-bio-53737"]
+INFOS - Starting service Tomcat
+INFOS - Starting Servlet Engine: Apache Tomcat/8.0.20
+INFOS - Starting ProtocolHandler ["http-bio-53737"]
+INFOS - Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+INFOS - ********************************************************************************
+INFOS - OpenEJB http://tomee.apache.org/
+INFOS - Startup: Fri Mar 06 23:17:03 CET 2015
+INFOS - Copyright 1999-2015 (C) Apache OpenEJB Project, All Rights Reserved.
+INFOS - Version: 5.0.0-SNAPSHOT
+INFOS - Build date: 20150306
+INFOS - Build time: 10:56
+INFOS - ********************************************************************************
+INFOS - openejb.home = /home/rmannibucau/dev/Tomitribe/secured-websocket/target/tomee-embedded_478813341
+INFOS - openejb.base = /home/rmannibucau/dev/Tomitribe/secured-websocket/target/tomee-embedded_478813341
+INFOS - Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@2593b800
+INFOS - Succeeded in installing singleton service
+INFOS - openejb configuration file is '/home/rmannibucau/dev/Tomitribe/secured-websocket/target/tomee-embedded_478813341/conf/openejb.xml'
+INFOS - Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+INFOS - Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+INFOS - Using 'openejb.system.apps=false'
+INFOS - Using 'openejb.deployments.classpath=false'
+INFOS - Creating TransactionManager(id=Default Transaction Manager)
+INFOS - Creating SecurityService(id=Tomcat Security Service)
+INFOS - Using 'openejb.servicemanager.enabled=false'
+INFOS - Using 'openejb.deployments.classpath.filter.systemapps=false'
+INFOS - Configuring enterprise application: 
+INFOS - Configuring Service(id=Default Managed Container, type=Container, provider-id=Default Managed Container)
+INFOS - Auto-creating a container for bean .Comp323248545: Container(type=MANAGED, id=Default Managed Container)
+INFOS - Creating Container(id=Default Managed Container)
+INFOS - Using directory /tmp for stateful session passivation
+INFOS - Enterprise application "" loaded.
+INFOS - Assembling app: 
+INFOS - Existing thread singleton service in SystemInstance(): org.apache.openejb.cdi.ThreadSingletonServiceImpl@2593b800
+INFOS - OpenWebBeans Container is starting...
+INFOS - Adding OpenWebBeansPlugin : [CdiPlugin]
+INFOS - Adding OpenWebBeansPlugin : [OpenWebBeansJsfPlugin]
+INFOS - All injection points were validated successfully.
+INFOS - OpenWebBeans Container has started, it took 77 ms.
+INFOS - using default host: localhost
+INFOS - ------------------------- localhost -> /
+INFOS - Using 'openejb.session.manager=org.apache.tomee.catalina.session.QuickSessionManager'
+INFOS - The start() method was called on component [org.apache.catalina.webresources.JarResourceSet@3111783d] after start() had already been called. The second call will be ignored.
+INFOS - The start() method was called on component [org.apache.catalina.webresources.DirResourceSet@4d466b1f] after start() had already been called. The second call will be ignored.
+INFOS - The start() method was called on component [org.apache.catalina.webresources.DirResourceSet@4a22e7db] after start() had already been called. The second call will be ignored.
+INFOS - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+INFOS - Deployed Application(path=)
+INFOS - Stopping ProtocolHandler ["http-bio-53737"]
+INFOS - Pausing ProtocolHandler ["http-bio-53737"]
+INFOS - Stopping service Tomcat
+INFOS - Undeploying app: 
+INFOS - Destroying ProtocolHandler ["http-bio-53737"]
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.211 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+----
+
